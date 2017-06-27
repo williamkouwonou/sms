@@ -5,10 +5,16 @@
  */
 package com.sms.server.entity;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+
 /**
  *
  * @author kouwonou
  */
-public class TemplateMessage {
-    
+@Entity
+public class TemplateMessage implements Serializable {
+    private Long id;
+    private String content;
+    private String identifiantSource;
 }

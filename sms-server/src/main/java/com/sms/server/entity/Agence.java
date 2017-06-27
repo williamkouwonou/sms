@@ -5,10 +5,25 @@
  */
 package com.sms.server.entity;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  *
  * @author kouwonou
  */
-public class Agence {
-    
+@Entity
+public class Agence implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String nom;
+    private String adresse;
+    private String tel1;
+    private String tel2;
+    private String email;
+    private String telFixe;
 }
